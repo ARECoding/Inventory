@@ -52,7 +52,7 @@ public class CategoryServiceImpl implements ICategoryService {
 				response.setMetadata("respuesta OK", "00", "respuesta exitosa");
 			}else {
 				response.setMetadata("Fallo la peticion", "-1", "No se encontro la categoria");	
-				return new ResponseEntity<CategoryResponseRest>(response, HttpStatus.INTERNAL_SERVER_ERROR);
+				return new ResponseEntity<CategoryResponseRest>(response, HttpStatus.NOT_FOUND);
 			}
 		} catch (Exception err) {
 			response.setMetadata("Respuesta no OK", "-1", "falle la peticion");
